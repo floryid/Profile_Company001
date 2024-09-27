@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#nav-links {
+    display: flex;
+}
+
+#nav-links li {
+    display: flex;
+    align-items: center;
+}
+
+#close-menu {
+    display: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        left: -250px; /* Start hidden off the screen */
+        width: 250px;
+        height: 100%;
+        padding-top: 60px;
+        transition: all 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    #nav-links.show {
+        left: 0; /* Slide in from the left */
+    }
+
+    #nav-links li {
+        text-align: left;
+        margin: 0;
+        width: 100%;
+    }
+
+    #nav-links li a {
+        display: block;
+        padding: 15px;
+        font-size: 18px;
+        color: #fff;
+        border-bottom: 1px solid #555;
+    }
+
+    #close-menu {
+        display: block;
+        text-align: right;
+        padding: 10px 20px;
+        font-size: 24px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff;
+    }
+}
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#home {
+    background-color: #444;
+    color: #fff;
+    padding: 100px 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
