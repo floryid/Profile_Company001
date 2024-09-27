@@ -1,0 +1,92 @@
+/* General Styles */
+
+  
+  .home-banner {
+    height: 100vh;
+    background: url('banner.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .introduction, .services-highlight, .latest-projects {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  /* Responsive Styles */
+  /* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navigation Bar Styles */
+  header {
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .toggle-btn {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+  }
+  
+  /* For Mobile View */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      text-align: center;
+    }
+  
+    .nav-links.show-menu {
+      display: flex;
+    }
+  
+    .toggle-btn {
+      display: block;
+    }
+  
+    .nav-links a {
+      padding: 1rem;
+      border-bottom: 1px solid #444;
+    }
+  
+    .nav-links a:last-child {
+      border-bottom: none;
+    }
+  }
+  
+  
